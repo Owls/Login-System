@@ -22,9 +22,10 @@ bool IsLoggedIn()
 	cin >> password;
 
 	//Creates a text file in our containing folder, with the value entered for username. 
-	ifstream read("c:\\" + username + ".txt");
+	ifstream read("C:\\Users\\Hunter\\source\\repos\\LoginSystemExercise\\Debug\\" + username + ".txt");
 	getline(read, un); //Reads file and assigns value to un.
 	getline(read, pw); //" ".
+	read.close();
 
 	if (un == username && pw == password)
 	{
@@ -54,8 +55,8 @@ int main()
 
 		//Writes to file.
 		ofstream file; 
-		file.open("c:\\" + username + ".txt");  
-		file << username << endl << password;
+		file.open("C:\\Users\\Hunter\\source\\repos\\LoginSystemExercise\\Debug\\" + username + ".txt");  
+		file << username << endl << password << endl;
 		file.close();
 
 		main();
@@ -66,7 +67,7 @@ int main()
 
 		if (!status)
 		{
-			cout << "Incorrect login. Please try again." << endl; //Displays if USer eneters incorrect information.
+			cout << "Incorrect login. Please try again." << endl; //Displays if User eneters incorrect information.
 			system("PAUSE");
 			return 0;
 		}
