@@ -22,7 +22,7 @@ bool IsLoggedIn()
 	cin >> password;
 
 	//Creates a text file in our containing folder, with the value entered for username. 
-	ifstream read("C:\\Users\\Hunter\\source\\repos\\LoginSystemExercise\\Debug\\" + username + ".txt");
+	ifstream read("C:\\Users\\User\\source\\repos\\LoginSystemExercise\\Debug\\" + username + ".txt");
 	getline(read, un); //Reads file and assigns value to un.
 	getline(read, pw); //" ".
 	read.close();
@@ -55,7 +55,7 @@ int main()
 
 		//Writes to file.
 		ofstream file; 
-		file.open("C:\\Users\\Hunter\\source\\repos\\LoginSystemExercise\\Debug\\" + username + ".txt");  
+		file.open("C:\\Users\\User\\source\\repos\\LoginSystemExercise\\Debug\\" + username + ".txt");  
 		file << username << endl << password << endl;
 		file.close();
 
